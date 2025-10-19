@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jobly: Empowering South African youth with AI-powered job matching, skills training, and mentorship.">
+    <meta name="keywords" content="jobs, South Africa, career, AI matching, skills training, mentorship">
+    <meta name="author" content="Jobly">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Jobly",
+        "url": "https://www.jobly.co.za",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.jobly.co.za/jobs.html?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <title>Jobly - Empowering South African Youth</title>
+    <link rel="stylesheet" href="landingpage2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+        <nav class="nav-container">
+            <h1 class="logo">Jobly</h1>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                
+                <li><a href="jobs.html">Jobs</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">Learning Hub</a>
+                    <ul class="dropdown-content" role="menu">
+                        <li><a href="cvBuilder.html">CV Builder</a></li>
+                        <li><a href="CV-Templates.html">Templates</a></li>
+                        <li><a href="interviewtips.html">Interview Tips</a></li>
+                        <li><a href="skillstraining.html">Skills Training</a></li>
+                    </ul>
+                </li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown profile-dropdown" style="display: none;">
+                    <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">
+                        <span id="profileInitials"></span>
+                    </a>
+                    <ul class="dropdown-content" role="menu">
+                        <li><a href="myprofile.html">My Profile</a></li>
+                        
+                        
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a id="logout">Logout</a></li>
+                    </ul>
+                </li>
+                <li class="notification-item">
+                    <div class="notification-icon" aria-label="Notifications" role="button" tabindex="0">
+                        <i class="fas fa-bell notification-bell"></i>
+                        <span class="notification-badge" id="notificationCount">0</span>
+                    </div>
+                    <div class="notification-dropdown">
+                        <div class="notification-header">
+                            <h3>Notifications</h3>
+                            <button class="close-notifications" aria-label="Close notifications"><i class="fas fa-times"></i></button>
+                        </div>
+                        <div class="notification-list" id="notificationList"></div>
+                        <div class="notification-footer">
+                            <button class="mark-all-read">Mark all as read</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="guest-cta" style="display: block;">
+                    <a href="signup.html" class="cta-button">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <div class="landing-container">
+            <div id="message"></div>
+
+            <section class="hero">
+                <h1>Discover Your Career Path with Jobly</h1>
+                <p>AI-powered job matching, skills training, and mentorship tailored for South African youth.</p>
+                <form class="search-form" action="jobs.html">
+                    <label for="hero-search" class="sr-only">Search jobs by title or location</label>
+                    <input type="text" id="hero-search" placeholder="Search jobs by title or location..." aria-label="Search jobs">
+                    <button type="submit" class="cta-button">Search Jobs</button>
+                </form>
+            </section>
+
+            <section class="features">
+                <div class="feature">
+                    <i class="fas fa-rocket feature-icon"></i>
+                    <h2>Smart Job Matching</h2>
+                    <p>Our AI finds jobs that align with your skills, experience, and location preferences.</p>
+                    <a href="smartmatching.html" class="cta-button">Explore Now</a>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-book-open feature-icon"></i>
+                    <h2>Learning Hub</h2>
+                    <p>Access free courses, CV tools, and interview prep to boost your employability.</p>
+                    <a href="cvBuilder.html" class="cta-button">Start Learning</a>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-users feature-icon"></i>
+                    <h2>Mentorship Network</h2>
+                    <p>Connect with industry professionals for personalized career guidance.</p>
+                    <a href="mentorship.html" class="cta-button">Find a Mentor</a>
+                </div>
+            </section>
+
+            <section class="why-jobly">
+                <h2>Why Choose Jobly?</h2>
+                <div class="why-jobly-grid">
+                    <div class="why-jobly-item">
+                        <i class="fas fa-bullseye why-jobly-icon"></i>
+                        <h3>Empowering Your Future</h3>
+                        <p>Designed for South African youth, Jobly uses AI to match you with opportunities that fit your unique skills and goals.</p>
+                    </div>
+                    <div class="why-jobly-item">
+                        <i class="fas fa-universal-access why-jobly-icon"></i>
+                        <h3>Free & Accessible</h3>
+                        <p>All tools—job search, CV builder, and training—are free, ensuring everyone can access career growth.</p>
+                    </div>
+                    <div class="why-jobly-item">
+                        <i class="fas fa-globe-africa why-jobly-icon"></i>
+                        <h3>Community-Driven</h3>
+                        <p>Join a network of job seekers and mentors across South Africa to build your career with support.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="newsletter">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for job alerts, career tips, and exclusive opportunities.</p>
+                <form id = "contact">
+                    <input name = "user_email" type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                    <p id="status" role="status" aria-live="polite"></p>
+                </form>
+                
+                <script>
+                    // Replace with your public key
+                    emailjs.init({ publicKey: 'BBiQhbhrml9MJSV61' });
+
+                    const form = document.getElementById('contact');
+                    const status = document.getElementById('status');
+
+                    form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    status.textContent = 'Subscribing...';
+
+                    try {
+                        // Replace with your service and template IDs
+                        await emailjs.sendForm("service_8ze3vfs","template_d9o041o", form);
+                        status.textContent = 'Subscribed. Thank you!';
+                        form.reset();
+                    } catch (err) {
+                        status.textContent = 'Could not subscribe. Please try again.';
+                    }
+                    });
+                </script>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-content">
+        <div class="footer-section">
+            <h3>Jobly</h3>
+            <p>Empowering South African youth with employment opportunities and career guidance.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <button class="footer-toggle" aria-expanded="false">Show Links</button>
+            <div class="footer-links" style="display: none;">
+                <p><a href="index.html">Home</a></p>
+                <p><a href="jobs.html">Jobs</a></p>
+                <p><a href="cvbuilder.html">Learning Hub</a></p>
+                <p><a href="mentorship.html">Mentorship</a></p>
+                <p><a href="about.html">About Us</a></p>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Resources</h3>
+            <button class="footer-toggle" aria-expanded="false">Show Resources</button>
+            <div class="footer-links" style="display: none;">
+                <p><a href="cvbuilder.html">CV Builder</a></p>
+                <p><a href="interviewtips.html">Interview Tips</a></p>
+                <p><a href="career.html">Career Advice</a></p>
+                <p><a href="skillstraining.html">Skills Training</a></p>
+                <p><a href="faq.html">FAQ</a></p>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:info@jobly.co.za">info@jobly.co.za</a></p>
+            <p>Phone: 0800 123 456</p>
+            <p>Johannesburg, South Africa</p>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>© 2025 Jobly. All rights reserved.</p>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js"></script>
+    <script type="module" src="landingpage2.js"></script>
+
+    <!-- Chatbot Toggle Icon -->
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ChatBot</title>
+        <link rel="stylesheet" href="chatbot.css" />
+    </head>
+    <body class="logged-in"> <!-- Add/remove this dynamically based on login -->
+
+    
+        <!-- Chatbot Toggle Icon -->
+        
+        <div id="chatbot-icon">💬</div>
+
+        <!-- Chatbot Container -->
+        <div id="chatbot-container" class="hidden">
+            <div id="chatbot-header">
+            <span> JoblyBot</span>
+            <button id="close-btn">&times;</button>
+            </div>
+
+            <div id="chatbot-body">
+            <div id="chatbot-messages"></div>
+            </div>
+
+            <div id="chatbot-input-container">
+            <input type="text" id="chatbot-input" placeholder="Type a message..." />
+            <button id="send-btn">Send</button>
+            <button id="clear-btn">Clear</button>
+            </div>
+        </div>
+
+    <script src="chatbot.js" defer></script>
+    </body>
+</html>
+</body>
+</html>

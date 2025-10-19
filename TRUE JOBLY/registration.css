@@ -1,0 +1,140 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Registration Container */
+.registration-container {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto;
+    border-top: 5px solid #32cd32; /* Lime green accent */
+    animation: fadeIn 0.5s ease-out;
+    text-align: center;
+}
+
+/* Jobly Branding */
+.logo {
+    font-weight: 700;
+    color: #32cd32;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* Tagline */
+.tagline {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Headings */
+h2 {
+    color: #32cd32;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    padding: 0.85rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.85rem;
+    background-color: #32cd32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2db82d;
+    transform: translateY(-2px);
+}
+
+/* Links */
+.links {
+    margin-top: 1rem;
+}
+
+.login-link a {
+    color: #32cd32;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    color: #2db82d;
+}
+
+/* Message Styles */
+#message {
+    margin: 1.25rem 0;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.error {
+    color: #d32f2f;
+    background-color: #fce4e4;
+    border: 1px solid #f5c6cb;
+}
+
+.success {
+    color: #388e3c;
+    background-color: #e8f5e9;
+    border: 1px solid #c3e6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .registration-container {
+        margin: 1rem;
+        padding: 1.75rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

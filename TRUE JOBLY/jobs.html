@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Dream Job</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="back-home">
+        <a href="landingpage2.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    
+    <header class="header">
+        <h1>Find Your Dream Job in South Africa</h1>
+        <p>Browse thousands of opportunities across all industries</p>
+    </header>
+
+    <div class="search-container">
+        <div class="filters">
+            <div class="search-input">
+                <i class="fas fa-search"></i>
+                <input type="text" id="keyword" placeholder="Search jobs, companies, or keywords...">
+            </div>
+            <select id="department">
+                <option value="">All Industries</option>
+            </select>
+            <button id="search-button">
+                <i class="fas fa-search"></i> Search Jobs
+            </button>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="loading" class="loading">
+            <div class="loading-spinner"></div>
+            <p>Finding the best jobs for you...</p>
+        </div>
+        <div id="jobs"></div>
+    </div>
+
+    <!-- Application Modal -->
+    <div id="application-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Apply for <span id="job-title"></span></h2>
+            <form id="application-form">
+                <input type="hidden" id="job-id">
+                
+                <div class="form-group">
+                    <label for="applicant-name">Full Name *</label>
+                    <input type="text" id="applicant-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="applicant-email">Email *</label>
+                    <input type="email" id="applicant-email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="applicant-phone">Phone Number *</label>
+                    <input type="tel" id="applicant-phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="applicant-resume">Upload Resume (PDF, DOC, DOCX) *</label>
+                    <input type="file" id="applicant-resume" accept=".pdf,.doc,.docx" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="applicant-cover">Cover Letter</label>
+                    <textarea id="applicant-cover" placeholder="Tell us why you're a good fit for this position..."></textarea>
+                </div>
+                
+                <button type="submit" class="apply-button">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Job Details Modal -->
+    <div id="job-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-details">&times;</span>
+            <h2 id="details-job-title"></h2>
+            <div class="job-details-meta">
+                <span><i class="fas fa-building"></i> <span id="details-company"></span></span>
+                <span><i class="fas fa-map-marker-alt"></i> <span id="details-location"></span></span>
+                <span><i class="fas fa-money-bill-wave"></i> <span id="details-salary"></span></span>
+                <span><i class="fas fa-clock"></i> <span id="details-posted"></span></span>
+            </div>
+            <div class="job-description-full">
+                <h3>Job Description</h3>
+                <div id="details-description"></div>
+            </div>
+            <div class="job-details-actions">
+                <button class="apply-from-details-btn">
+                    <i class="fas fa-paper-plane"></i> Apply Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js"></script>
+    <script type="module" src="scripts.js"></script>
+</body>
+</html>

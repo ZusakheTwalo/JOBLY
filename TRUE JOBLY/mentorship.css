@@ -1,0 +1,283 @@
+/* Variables */
+:root {
+    --primary: #28a428;
+    --primary-dark: #1e7b1e;
+    --primary-light: #e6f7ee;
+    --text-dark: #1a202c;
+    --text-medium: #4a5568;
+    --text-light: #718096;
+    --bg-light: #f7fafc;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --transition: all 0.2s ease;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Back to Home Button */
+.back-home {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.back-button:hover, .back-button:focus {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Main Content Styles */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 0.5s ease-out;
+}
+
+h1, h2, h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+
+.section p {
+    color: var(--text-medium);
+    margin-bottom: 1rem;
+}
+
+/* Links Section */
+.links ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.links li {
+    padding: 1rem;
+    border-left: 3px solid var(--primary);
+    transition: transform 0.3s;
+}
+
+.links li:hover {
+    transform: translateX(5px);
+}
+
+.links a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.links a::before {
+    content: "\f054"; /* Font Awesome chevron-right */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Motivation Section */
+.motivation-section {
+    background: var(--primary-light);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+.motivation-quote {
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+    font-style: italic;
+    padding: 1.5rem;
+    background: white;
+    border-left: 4px solid var(--primary);
+    margin: 1rem 0;
+}
+
+/* Button Styles */
+.btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem auto;
+}
+
+/* Videos Section */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.video-card {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.video-card iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Mentorship Section */
+.mentorship-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--primary-light), white);
+    border-radius: var(--border-radius);
+    margin: 3rem 0;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .links ul {
+        grid-template-columns: 1fr;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mentorship-section {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.75rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .section {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+    }
+}
