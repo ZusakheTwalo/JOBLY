@@ -1,7 +1,7 @@
 # JOBLY
 Jobly is a modern, accessible platform that helps job seekers build standout CVs, discover relevant roles, and track their application journey with intelligent, skills-based matching
 
-Core features:
+# Core features:
 
   CV builder: Create a professional CV with structured sections, live preview, and export to PDF.
   
@@ -21,7 +21,7 @@ Core features:
   
   Accessibility & responsiveness: Inclusive design, keyboard navigation, and a mobile-first responsive UI.
 
-Tech stack:
+# Tech stack:
 
   Frontend: HTML, CSS, JavaScript (responsive UI/UX with accessibility-first patterns)
   
